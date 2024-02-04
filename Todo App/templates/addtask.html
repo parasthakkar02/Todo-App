@@ -1,0 +1,27 @@
+{% extends 'base.html' %} {% block body %}
+<div class="container my-3">
+  <h2 class="text-center">Add a Task</h2>
+  <form action="/addtask" method="POST">
+    <div class="mb-3">
+      <label for="title" class="form-label">Title</label>
+      <input
+        type="text"
+        class="form-control"
+        name="title"
+        id="title"
+        aria-describedby="emailHelp"
+      />
+    </div>
+    <div class="mb-3">
+      <label for="desc" class="form-label">Description</label>
+      <textarea class="form-control" name="desc" id="desc"></textarea>
+    </div>
+    <div class="mb-3">
+      <label for="lastdate" class="form-label">Last Date</label>
+      <input type="date" class="form-control" name="lastdate" id="datepicker" />
+    </div>
+
+    <button type="submit" class="btn btn-outline-dark">Submit</button>
+  </form>
+</div>
+{% endblock body %}
